@@ -17,5 +17,6 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function() {
     Route::post('ticket/edit/{id}', 'TicketController@edit');
     Route::post('ticket/update/{id}', 'TicketController@update');
     Route::delete('ticket/delete/{id}', 'TicketController@destroy');
-
+    
+    //изменил
 });
