@@ -1,33 +1,19 @@
-// import Vue from 'vue'
-// import Router from 'vue-router'
+import Vue from 'vue'
+import store from './store'
+import Router from 'vue-router'
 
-
-// Vue.use(Router);
-
-// // export default new Router({
-// //   mode: 'hash',
-// //   base: process.env.BASE_URL,
-  
-// // });
-
-// // import Vue from 'vue'
-// // import Router from 'vue-router'
-
-// // import store from './store'
-
-// // Vue.use(Router);
-
-// // const router = new Router({
-// //   mode: 'hash',
-// //   base: process.env.BASE_URL,
-// //   routes: [
-// //     {
-// //       path: '/',
-// //       name: 'mainContent',
-// //       component: () => import('./components/ExampleComponent.vue')
-// //     }
-// //   ]
-// // });
+Vue.use(Router);
+const router = new Router({
+  mode: 'hash',
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: () => import('./components/Home.vue')
+    }
+  ]
+});
 
 // // router.beforeEach((to, from, next) => {
 
@@ -42,4 +28,4 @@
 // //     next()
 // // });
 
-// export default router
+export default router
