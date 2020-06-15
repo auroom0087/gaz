@@ -14,7 +14,7 @@
 
 <body>
     <div id="app">
-        <App />
+        <App></App>
     </div>
     <script type="text/javascript" src="js/app.js"></script>
 </body>

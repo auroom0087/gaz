@@ -94912,6 +94912,16 @@ module.exports = function(module) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _plugins_vuetify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../plugins/vuetify */ "./resources/plugins/vuetify.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
+Vue.use(_plugins_vuetify__WEBPACK_IMPORTED_MODULE_0__["default"]);
+Vue.component('App', __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue")["default"]);
+var app = new Vue({
+  vuetify: _plugins_vuetify__WEBPACK_IMPORTED_MODULE_0__["default"],
+  el: '#app'
+});
 
 /***/ }),
 
