@@ -17,17 +17,17 @@ import store from './store'
 
 // Vue.use(Router);
 
-const router = new Router({
-  mode: 'hash',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'mainContent',
-      component: () => import('./components/ExampleComponent.vue')
-    }
-  ]
-});
+// const router = new Router({
+//   mode: 'hash',
+//   base: process.env.BASE_URL,
+//   routes: [
+//     {
+//       path: '/',
+//       name: 'mainContent',
+//       component: () => import('./components/ExampleComponent.vue')
+//     }
+//   ]
+// });
 
 // router.beforeEach((to, from, next) => {
 
