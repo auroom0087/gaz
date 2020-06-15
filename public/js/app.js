@@ -95117,8 +95117,8 @@ var opts = {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Astra\Desktop\web\vue_projects\gaz\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Astra\Desktop\web\vue_projects\gaz\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\hack\gaz\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\hack\gaz\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
