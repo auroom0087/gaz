@@ -12,7 +12,7 @@ var webpackConfig = {
     // other webpack config ...
 }
 
-mix.webpackConfig( webpackconfig );
+mix.webpackConfig( webpackConfig );
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
