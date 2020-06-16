@@ -33,9 +33,19 @@ const router = new Router({
       component: () => import('./components/ShareExperience.vue')
     },
     {
+      path: '/questioning',
+      name: 'questioning',
+      component: () => import('./components/Questioning.vue')
+    },
+    {
       path: '/profile',
       name: 'profile',
       component: () => import('./components/Profile.vue')
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: () => import('./components/Shop.vue')
     },
     {
       path: '/login',
