@@ -7,7 +7,7 @@
           <v-avatar class="profile" color="grey" size="150" tile>
             <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
           </v-avatar>
-          <v-list-item-content justify-center>
+          <v-list-item-content>
             <v-list-item-title class="title">Имя фамилия</v-list-item-title>
             <v-list-item-subtitle>Должность</v-list-item-subtitle>
             <!-- Уровень -->
@@ -91,7 +91,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app clipped-left class="blue lighten-1 white--text">
+    <v-app-bar app clipped-left class="blue lighten-1">
       <v-app-bar-nav-icon class="white--text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <router-link to="/" class="white--text ml-4"><v-toolbar-title class="logo">Газпромбанк</v-toolbar-title> </router-link>
     </v-app-bar>
