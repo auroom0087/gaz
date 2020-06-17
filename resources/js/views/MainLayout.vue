@@ -89,6 +89,17 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+
+      <v-list-item link @click="logout">
+          <v-list-item-action>
+            <v-icon>fa-window-close</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Выйти</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
     </v-navigation-drawer>
 
     <v-app-bar app clipped-left class="blue lighten-1">
@@ -110,6 +121,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+import store from './../store'
 export default {
   props: {
     source: String
@@ -120,6 +133,21 @@ export default {
   }),
   created() {
     this.$vuetify.theme.dark = false;
+  },
+
+  methods: {
+    async logout() {
+      console.log("Logged out")
+      await axios.post('/api/auth/signout', {
+        headers: {
+          'X-CSRF-TOKEN': window.Laravel.csrfToken,
+        }
+      })
+      .then(res => {
+        console.log(res)
+        store.state.logToken = null
+      })
+    }
   }
 };
 </script>

@@ -15,11 +15,18 @@ class MeController extends Controller
 
     public function __invoke(Request $request) {
         
-        $user = $request->user();
-
-        return response()->json([
-            'email' => $user->email,
-            'name' => $user->name
-        ]);
+        dd("hello");
+        // $user = User::where('email', $request->email)->first()->get();
+        // dd($user);
+        // return response()->json([
+        //     'last_name' => $user->last_name,
+        //     'name' => $user->name,
+        //     'second_name' => $user->second_name,
+        //     'birth_date' => $user->birth_date,
+        //     'position' => $user->position,
+        //     'rank' =>  $user->rank,
+        //     'department' => $user->department,
+        //     'email' => $user->email
+        // ]);
     }
 }
