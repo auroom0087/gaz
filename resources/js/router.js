@@ -9,23 +9,63 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: () => import('./components/Home.vue')
-    }
+      name: 'mainContent',
+      component: () => import('./components/MainContent.vue')
+    },
+    {
+      path: '/rules',
+      name: 'rules',
+      component: () => import('./components/Rules.vue')
+    },
+    {
+      path: '/culture',
+      name: 'culture',
+      component: () => import('./components/Culture.vue')
+    },
+    {
+      path: '/proposal',
+      name: 'proposal',
+      component: () => import('./components/Proposal.vue')
+    },
+    {
+      path: '/shareExperience',
+      name: 'shareExperience',
+      component: () => import('./components/ShareExperience.vue')
+    },
+    {
+      path: '/questioning',
+      name: 'questioning',
+      component: () => import('./components/Questioning.vue')
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('./components/Profile.vue')
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: () => import('./components/Shop.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('./views/login.vue')
+    },
   ]
 });
 
-// // router.beforeEach((to, from, next) => {
+// router.beforeEach((to, from, next) => {
 
-// //     // check if the route requires authentication and user is not logged in
-// //     if (to.matched.some(route => route.meta.requiresAuth) && !store.state.isLoggedIn) {
-// //         // redirect to login page
-// //         alert('Необходимо войти в систему!')
-// //         next({ name: 'mainContent' })
-// //         return
-// //     }
+//     // check if the route requires authentication and user is not logged in
+//     if (to.matched.some(route => route.meta.requiresAuth) && !store.state.isLoggedIn) {
+//         // redirect to login page
+//         alert('Необходимо войти в систему!')
+//         next({ name: 'mainContent' })
+//         return
+//     }
 
-// //     next()
-// // });
+//     next()
+// });
 
 export default router

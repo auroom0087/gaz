@@ -1,0 +1,11 @@
+<template>
+<v-card 
+        class=""
+        outlined
+        min-width="50%"
+        max-width="85%"
+        min-heigth="50%"
+        max-height="90%"
+    >
+</v-card>
+</template>
