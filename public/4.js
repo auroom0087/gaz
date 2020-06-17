@@ -95,8 +95,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                             console.log(res.data['token']);
                             _store__WEBPACK_IMPORTED_MODULE_1__["default"].state.logToken = res.data['token'];
                             axios.defaults.headers.common['Authorization'] = 'Bearer ' + _store__WEBPACK_IMPORTED_MODULE_1__["default"].state.logToken;
-                            _context.next = 5;
-                            return axios.get('/api/auth/me', form, {
+                            console.log(_this.email);
+                            _context.next = 6;
+                            return axios.post('/api/auth/me', form, {
                               headers: {
                                 'X-CSRF-TOKEN': window.Laravel.csrfToken
                               }
@@ -104,7 +105,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                               return console.log(res);
                             });
 
-                          case 5:
+                          case 6:
                           case "end":
                             return _context.stop();
                         }

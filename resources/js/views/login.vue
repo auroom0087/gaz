@@ -67,8 +67,8 @@ import store from './../store'
           console.log(res.data['token'])
           store.state.logToken = res.data['token']
           axios.defaults.headers.common['Authorization'] = 'Bearer ' + store.state.logToken
-          
-          await axios.get('/api/auth/me', form, {
+          console.log(this.email)
+          await axios.post('/api/auth/me', form, {
             headers: {
               'X-CSRF-TOKEN': window.Laravel.csrfToken,
             }

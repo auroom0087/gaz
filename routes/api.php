@@ -2,7 +2,7 @@
 Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function() {
     Route::post('signin', 'SignInController');
     Route::post('signout', 'SignOutController');
-    Route::get('me', 'MeController');
+    Route::post('me', 'MeController');
 
     Route::get('posts', 'BlogController@index');
     Route::get('post/create', 'BlogController@create');
