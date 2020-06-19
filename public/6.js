@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[6],{
 
-/***/ "./resources/js/components/Questioning.vue":
-/*!*************************************************!*\
-  !*** ./resources/js/components/Questioning.vue ***!
-  \*************************************************/
+/***/ "./resources/js/components/Proposal.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/components/Proposal.vue ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27,7 +27,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   
 )
 
-component.options.__file = "resources/js/components/Questioning.vue"
+component.options.__file = "resources/js/components/Proposal.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ })

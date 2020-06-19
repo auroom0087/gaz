@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" app clipped>
       <v-list dense>
         <!-- /* Аватар и данные в навбаре*/ -->
-        <div class="profile__navbar" v-if="isLoggedIn">
+        <div class="profile__navbar">
           <v-avatar class="profile" color="grey" size="150" tile>
             <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
           </v-avatar>

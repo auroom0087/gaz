@@ -1,20 +1,25 @@
 <template> 
 	<v-app> 
-        <MainLayout />
+    <component :is="layout"></component>
     </v-app>
 </template>
 
 <script> 
-import MainLayout from './views/MainLayout.vue'
+
+import LoginLayout from './views/LoginLayout'
+import MainLayout from './views/MainLayout'
+
 import store from './store.js'
-    export default {
-        created() {
-            if(!localStorage.getItem('user')) {
-                this.$router.push({ name: 'login' })
-            }
-        },
-        components: {
-            MainLayout
+
+export default {
+
+    computed: {
+        layout() {
+            return (this.$route.meta.layout || 'login') + '-layout'
         }
+    },
+    components: {
+        LoginLayout, MainLayout
     }
+}
 </script>
