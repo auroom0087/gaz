@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[8],{
 
-/***/ "./resources/js/components/ShareExperience.vue":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/ShareExperience.vue ***!
-  \*****************************************************/
+/***/ "./resources/js/components/Shop.vue":
+/*!******************************************!*\
+  !*** ./resources/js/components/Shop.vue ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27,7 +27,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   
 )
 
-component.options.__file = "resources/js/components/ShareExperience.vue"
+component.options.__file = "resources/js/components/Shop.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ })

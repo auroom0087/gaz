@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Api\JWTAuth;
 use Illuminate\Http\Request;
+use App\User;
 
 class SignInController extends Controller
 {
@@ -13,7 +14,9 @@ class SignInController extends Controller
             return response("Попытка не удалась!", 401);
         }
         
-        return response()->json(compact('token'));
+        $user = User::where('email', $request->input('email'))->first()->get();
+        return response()
+        ->json(['token' => $token, 'user' => $user]);
     }
 
 }

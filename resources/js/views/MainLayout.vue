@@ -3,12 +3,12 @@
     <v-navigation-drawer v-model="drawer" app clipped>
       <v-list dense>
         <!-- /* Аватар и данные в навбаре*/ -->
-        <div class="profile__navbar">
+        <div class="profile__navbar" v-if="isLoggedIn">
           <v-avatar class="profile" color="grey" size="150" tile>
             <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
           </v-avatar>
           <v-list-item-content>
-            <v-list-item-title class="title">Имя фамилия</v-list-item-title>
+            <v-list-item-title class="title"> {{ user.email }}</v-list-item-title>
             <v-list-item-subtitle>Должность</v-list-item-subtitle>
             <!-- Уровень -->
             <v-progress-linear 
@@ -129,24 +129,27 @@ export default {
   },
   data: () => ({
     drawer: null,
-    skill: 20
+    skill: 20,
+    user: {},
+    email: '',
+    isLoggedIn: ''
   }),
+
   created() {
     this.$vuetify.theme.dark = false;
   },
 
+  mounted() {
+    this.isLoggedIn = store.state.isLoggedIn
+    this.user = JSON.parse(localStorage.getItem('user'))
+
+    console.log(this.isLoggedIn)
+    console.log(this.user.email)
+  },
+
   methods: {
     async logout() {
-      console.log("Logged out")
-      await axios.post('/api/auth/signout', {
-        headers: {
-          'X-CSRF-TOKEN': window.Laravel.csrfToken,
-        }
-      })
-      .then(res => {
-        console.log(res)
-        store.state.logToken = null
-      })
+      this.$router.push({ name: 'logout'})
     }
   }
 };

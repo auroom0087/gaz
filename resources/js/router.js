@@ -52,20 +52,25 @@ const router = new Router({
       name: 'login',
       component: () => import('./views/login.vue')
     },
+    {
+      path: '/logout',
+      name: 'logout',
+      component: () => import('./views/Logout.vue')
+    },
   ]
 });
 
-// router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
 
-//     // check if the route requires authentication and user is not logged in
-//     if (to.matched.some(route => route.meta.requiresAuth) && !store.state.isLoggedIn) {
-//         // redirect to login page
-//         alert('Необходимо войти в систему!')
-//         next({ name: 'mainContent' })
-//         return
-//     }
+    // check if the route requires authentication and user is not logged in
+    if (to.matched.some(route => route.meta.requiresAuth) && !store.state.isLoggedIn) {
+        // redirect to login page
+        alert('Необходимо войти в систему!')
+        next({ name: 'mainContent' })
+        return
+    }
 
-//     next()
-// });
+    next()
+});
 
 export default router

@@ -50,33 +50,13 @@ import store from './../store'
     },
 
     methods: {
-      async login() {
-        var form = {
-          email: this.email,
-          password: this.password
-        }
-        console.log("Trying to login " + this.email )
-
-        await axios.post('/api/auth/signin', form, {
-            headers: {
-              'X-CSRF-TOKEN': window.Laravel.csrfToken,
-            }
-          },
-        )
-        .then(async (res) => {
-          console.log(res.data['token'])
-          store.state.logToken = res.data['token']
-          axios.defaults.headers.common['Authorization'] = 'Bearer ' + store.state.logToken
-          console.log(this.email)
-          await axios.post('/api/auth/me', form, {
-            headers: {
-              'X-CSRF-TOKEN': window.Laravel.csrfToken,
-            }
-          }).
-          then(res => console.log(res))
-          // this.$router.push({ name: 'user' })
-        })
-      }
+      login: function () {
+        let email = this.email 
+        let password = this.password
+        this.$store.dispatch('login', { email, password })
+       .then(() => this.$router.push('/'))
+       .catch(err => console.log(err))
+      },
     },
     props: {
       source: String,
