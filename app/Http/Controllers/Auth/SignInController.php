@@ -18,7 +18,12 @@ class SignInController extends Controller
         }
         
         $user = User::where('email', $request->input('email'))->first()->get();
-        return response()->json(compact('token', 'user'));
+        dd($user->toArray()[0]->id);
+        // $user_dep = User::find($user->id)->department;
+
+        // dd('user_dep');
+
+        // return response()->json(compact('token', 'user'));
     }
 
 }

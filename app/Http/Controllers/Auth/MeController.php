@@ -15,8 +15,5 @@ class MeController extends Controller
 
     public function __invoke(Request $request) {
         dd($request->only('email'));
-        // $user = User::where('email', $request->email)->first()->get();
-
-        // return response()->json(compact('user'));
     }
 }

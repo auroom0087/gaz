@@ -8,8 +8,8 @@
             <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
           </v-avatar>
           <v-list-item-content>
-            <v-list-item-title class="title"> {{ user.email }}</v-list-item-title>
-            <v-list-item-subtitle>Должность</v-list-item-subtitle>
+            <v-list-item-title class="title"> {{ user.last_name}} {{ user.name }}</v-list-item-title>
+            <v-list-item-subtitle>{{ user.position }}</v-list-item-subtitle>
             <!-- Уровень -->
             <v-progress-linear 
               class="mt-4" 
