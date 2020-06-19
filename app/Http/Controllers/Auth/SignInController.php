@@ -10,13 +10,15 @@ use App\User;
 class SignInController extends Controller
 {
     public function __invoke(Request $request) {
+        
+        // dd($request);
+
         if (!$token = auth()->attempt($request->only('email', 'password'))) {
             return response("Попытка не удалась!", 401);
         }
         
         $user = User::where('email', $request->input('email'))->first()->get();
-        return response()
-        ->json(['token' => $token, 'user' => $user]);
+        return response()->json(compact('token', 'user'));
     }
 
 }
